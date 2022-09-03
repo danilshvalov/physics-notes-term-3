@@ -81,9 +81,12 @@
         \qquad
         \vv{F_{12}} = k \frac{q_1 q_2}{r^2} \frac{\vv{r_{12}}}{r}.
     \end{equation*}
-    \begin{center}
-        \includegraphics[width=0.5\textwidth]{images/coulomb.png}
-    \end{center}
+
+    #+begin_center
+        #+attr_latex: :width 0.5\textwidth :center
+        [[./images/coulomb.png]]
+    #+end_center
+
     Закон кулона применим, если в условии данной задачи заряды можно рассматривать как /точечные/.
 #+end_definition
 
