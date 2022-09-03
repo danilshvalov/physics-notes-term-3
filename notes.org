@@ -152,3 +152,21 @@
     \qquad
     [\sigma]= \frac{\text{Кл}}{\text{м}}.
   \]
+
+# ** Телесный угол
+# #+begin_definition
+# Полный телесный угол:
+# #+end_definition
+# \[
+#     d\Omega = \frac{dS}{r^2} = \frac{dS_\perp}{r^2},
+#     \qquad
+#     \Omega = \frac{4\pi r^2}{r^2} = 4\pi \; \text{ср},
+#     \qquad
+#     [\Omega] = \text{стерадиан} = \text{ср}.
+# \]
+
+
+* Список задач :noexport:
+** TODO Полный телесный угол
+** TODO Поток вектора напряженности
+** TODO Теорема Остоградского Гаусса
