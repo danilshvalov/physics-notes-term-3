@@ -7,6 +7,7 @@
 #+latex_header: \setmainfont{PT Astra Serif}
 #+latex_header: \usepackage[margin=1.5cm]{geometry}
 #+latex_header: \usepackage{amsthm}
+#+latex_header: \usepackage{multicol}
 
 #+latex_header: \newtheorem{theorem}{Теорема}[section]
 #+latex_header: \newtheorem{lemma}[theorem]{Лемма}
@@ -200,5 +201,46 @@
 \]
 #+end_definition
 
+** Теорема Остоградского-Гаусса
+Теорема Остоградского-Гаусса позволяет связать поток вектора напряженности с величиной зарядов.
+#+attr_latex: :options [Остоградского-Гаусса]
+#+begin_theorem
+Поток вектора напряженности электрического поля через любую замкнутую поверхность равен алгебраической сумме электрических зарядов, охватываемой этой поверхностью, деленной на \(\varepsilon_0\):
+\[
+    \Phi = \oint\limits_S E_n ds =  \frac{1}{\varepsilon_0} \sum_i q_i.
+\]
+#+end_theorem
+
+#+begin_proof
+#+latex: \begin{multicols}{2}
+
+#+attr_latex: :width 0.35\textwidth
+[[./images/ostrogradskiy-gauss.png]]
+
+#+latex: \columnbreak
+
+\[
+    d\Phi = \vec{E} \cdot d\vec{S} = \frac{1}{4\pi \varepsilon_0} \cdot \frac{q}{r^2} dS\cos{\alpha}
+\]
+\[
+    d\Omega = \frac{dS_\perp}{r^2} = \frac{dS\cos{\alpha}}{r^2} \Rightarrow dS\cos{\alpha} = r^2 d\Omega
+\]
+\[
+    \Phi = \frac{1}{4\pi \varepsilon_0} \cdot q \int\limits_S d\Omega = \frac{4\pi q}{4\pi \varepsilon_0} = \frac{q}{\varepsilon_0}
+\]
+
+#+latex: \end{multicols}
+#+end_proof
+
+Поток напряженности равен нулю, если:
+- полный заряд внутри поверхности равен нулю (все \(q_i = 0\));
+- поверхность не охватывает зарядов. (\(d\Phi_1 = -d\Phi_2 \Rightarrow \Phi = 0\)).
+
+В случае, если заряды распределены непрерывно, теорема Остоградского-Гаусса записывается следующим образом:
+\[
+    \oint \limits_S E_n dS = \frac{1}{\varepsilon_0} \int \limits_V \rho dV,
+\]
+где \(V\) – объем, охваченный гауссовой поверхностью \(S\), \(\rho\) — объемная плотность заряда.
+
+
 * Список задач :noexport:
-** TODO Теорема Остоградского Гаусса
