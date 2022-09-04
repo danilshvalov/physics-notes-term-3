@@ -9,6 +9,8 @@
 #+latex_header: \usepackage{amsthm}
 #+latex_header: \usepackage{multicol}
 
+#+latex_header: \usepackage{enumitem}
+
 #+latex_header: \newtheorem{theorem}{Теорема}[section]
 #+latex_header: \newtheorem{lemma}[theorem]{Лемма}
 #+latex_header: \newtheorem{property}[theorem]{Свойство}
@@ -23,6 +25,15 @@
 #+latex_header: \hypersetup{linktoc = all, colorlinks = true, urlcolor = DodgerBlue4, citecolor = PaleGreen1, linkcolor = black}
 
 #+latex: \hypersetup{linktoc = all, colorlinks = true, urlcolor = DodgerBlue4, citecolor = PaleGreen1, linkcolor = blue}
+
+#+latex: \setlist[itemize]{itemsep=0.5em,topsep=0em,parsep=0em}
+
+#+begin_export latex
+\makeatletter
+\def\thm@space@setup{\thm@preskip=1pt
+\thm@postskip=1pt}
+\makeatother
+#+end_export
 
 * Электрическое поле в вакууме
 
@@ -73,6 +84,15 @@
 \[
     \sum_i q_i = \text{const}.
 \]
+
+** Квантование заряда
+#+begin_definition
+Квантование заряда — это принцип, согласно которому заряд любого объекта является целым числом, кратным элементарному заряду.
+#+end_definition
+
+Таким образом, заряд объекта может быть ровно \(0e\), \(1e\), \(-1e\) или \(2e\), но не \(\frac{1}{2} e\) или \(−3.8e\) (могут быть исключения из этого утверждения, в зависимости от того, как определяется «объект»; см. ниже). В этом и заключается причина терминологии «элементарный заряд»: подразумевается, что он является неделимой единицей заряда. При этом существует два известных вида *исключений* из неделимости элементарного заряда:
+- *Кварки* имеют квантовый заряд, кратный \(\frac{1}{3} e\). Однако кварки не могут быть изолированы, поскольку существуют только в группах. При этом стабильные группировки кварков (например, протон, состоящий из трех кварков) имеют заряды, кратные \(e\). По этой причине либо \(1e\), либо \(\frac{1}{3} e\) может обоснованно считаться «квантом заряда», в зависимости от контекста.
+- *Квазичастицы* не являются частицами как таковыми, а скорее возникающей сущностью в сложной материальной системе, которая ведет себя как частица.
 
 ** Носители электрического заряда
 #+begin_definition
